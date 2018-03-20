@@ -1,0 +1,35 @@
+html, body, figure, figcaption, ul, li, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.grid {
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+}
+
+.tile {
+  float: left;
+  background: gray;
+  border: 2px solid black;
+  width: 180px;
+  height: 180px;
+}
+
+.tile:hover {
+  background-color: yellow;
+}
+
+ul {
+  list-style: none;
+}
