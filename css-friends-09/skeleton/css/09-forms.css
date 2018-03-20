@@ -14,7 +14,8 @@
   flex-direction: column;
 }
 
-.form-fieldset input, textarea {
+.form-fieldset input, .form-fieldset textarea {
+  display: block;
   border: 1px solid gray;
 }
 
