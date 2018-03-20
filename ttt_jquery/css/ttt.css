@@ -19,17 +19,48 @@ body {
 }
 
 .tile {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 100px;
   float: left;
-  background: gray;
+  background: white;
   border: 2px solid black;
   width: 180px;
   height: 180px;
 }
 
+.tile:empty {
+  background: gray;
+}
+
 .tile:hover {
-  background-color: yellow;
+  background: yellow;
 }
 
 ul {
   list-style: none;
+}
+
+.x::after {
+  display: block;
+  width: 100%;
+  content: "x";
+  background: white;
+  font-size: 60px;
+  line-height: 200px;
+}
+
+.o::after {
+  display: block;
+  width: 100%;
+  content: "o";
+  background: white;
+  font-size: 60px;
+  line-height: 200px;
+}
+
+.game-over {
+  color: red;
+  cursor: default;
+  background: white;
 }

@@ -10,14 +10,31 @@ class View {
   bindEvents() {
     this.$el.on("click", $(".tile"), (event) => {
       let $tile = $(event.target);
-      let tilePos = $tile.attr("id");
-      const pos = tilePos.split("-").slice(1);
-      console.log(pos);
-      this.game.playMove(pos);
+      this.makeMove($tile);
     });
   }
 
-  makeMove($square) {}
+  makeMove($square) {
+    let tilePos = $square.attr("id");
+    let currentPlayer = this.game.currentPlayer;
+    const pos = tilePos.split("-").slice(1);
+
+    try {
+      this.game.playMove(pos);
+
+      $square.addClass(currentPlayer);
+      $square.after();
+    }
+    catch (e) {
+        alert("This " + e.msg.toLowerCase());
+    }
+
+    if (this.game.isOver()) {
+      this.$el.off("click");
+      this.$el.addClass("game-over");
+      this.$el.append("<h1>GAME OVER!</h1>");
+    }
+  }
 
   setupBoard() {
 
