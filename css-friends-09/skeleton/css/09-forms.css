@@ -1,0 +1,23 @@
+/* PHASE 9: Forms */
+
+
+.form-thumbnail {
+
+}
+
+.form {
+  display: flex;
+}
+
+.form-fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fieldset input, textarea {
+  border: 1px solid gray;
+}
+
+.form-fieldset input:focus, textarea:focus {
+  border: 1px solid green;
+}
