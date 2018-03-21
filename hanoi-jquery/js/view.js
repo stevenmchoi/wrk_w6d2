@@ -19,9 +19,9 @@ class HanoiView {
     for (let disc = 0; disc < 3; disc++) {
       const $pile1 = $("#pile-0");
       $pile1.append("<ul><ul>");
-      const $pile = $("<li></li>").addClass(`pile`);
-      $pile.attr("id", `pile-${pile}`);
-      $hanoi.append($pile);
+      const $disc = $("<li></li>").addClass(`disc`);
+      $disc.attr("id", `disc-${disc}`);
+      $pile1.append($disc);
     }
   }
 }
